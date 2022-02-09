@@ -1,8 +1,3 @@
-git clone https://github.com/sureshbabudj/personality-checker.git
-cd personality-checker
-npm install
-npm run dev
-
 # Personality Checker
 
 ## _The Last Markdown Editor, Ever_
