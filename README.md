@@ -1,7 +1,5 @@
 # Personality Checker
 
-## _The Last Markdown Editor, Ever_
-
 ## Installation
 
 Personality Checker requires [Node.js](https://nodejs.org/) v10+ to run.
