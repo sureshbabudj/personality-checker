@@ -1,0 +1,23 @@
+{
+  "name": "teamway",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^27.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.7",
+    "mockjs": "^1.1.0",
+    "sass": "^1.49.7",
+    "vite": "^2.7.2",
+    "vite-plugin-mock": "^2.9.6"
+  }
+}

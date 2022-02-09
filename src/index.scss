@@ -1,0 +1,311 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+
+$primary: #5b40e1;
+$white: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: $primary;
+  color: #7a797d;
+}
+
+#root {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: $white;
+  min-height: calc(100vh - 8rem);
+  border-radius: 0.2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0px 20px 12px 0px rgba(0, 0, 0, 0.4);
+  max-width: 980px;
+}
+
+// Header
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+      329deg,
+      rgba(255, 255, 255, 0.07) 40%,
+      transparent 10%
+    ),
+    linear-gradient(36deg, rgba(255, 255, 255, 0.13) 10%, transparent 15%),
+    linear-gradient(322deg, transparent 70%, rgba(255, 255, 255, 0.05) 51%),
+    linear-gradient(312deg, transparent 100%, rgba(255, 255, 255, 0.19) 0%);
+  background-color: darken($primary, 20%);
+  margin: -2rem -2rem 0 -2rem;
+  padding: 4rem 2rem 10rem 2rem;
+}
+
+.logo h1 {
+  font-size: 32px;
+  line-height: 38px;
+  color: $white;
+}
+
+nav {
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: block;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 0.2rem;
+        border: 1px solid transparent;
+        text-decoration: none;
+        color: $white;
+        &:hover,
+        &.highlight {
+          background-color: $primary;
+          color: $white;
+          &:hover {
+            background-color: darken($primary, 20%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// test
+.test {
+  display: flex;
+  margin: 4rem;
+  justify-content: center;
+  align-content: center;
+  min-height: 16rem;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-top: -5rem;
+  background: $white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 1px 16px rgb(255 255 255 / 20%);
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $primary;
+    margin-bottom: 2rem;
+    min-height: 4rem;
+  }
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    max-width: 75%;
+    line-height: 1.7rem;
+  }
+}
+
+// button
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 1px 0px darken($primary, 30%);
+  &.large {
+    padding: 1rem 4rem;
+    font-size: 1.1rem;
+  }
+  &.primary {
+    background-color: $primary;
+    color: $white;
+  }
+  &.outline {
+    background-color: transparent;
+    box-shadow: none;
+    color: darken($primary, 20%);
+    &:hover {
+      color: $white;
+      box-shadow: 0px 2px 1px 0px darken($primary, 30%);
+    }
+  }
+  &:hover {
+    background-color: darken($primary, 20%);
+  }
+}
+
+// option
+.options {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  .option {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-self: flex-start;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+    align-items: baseline;
+    label {
+      display: inline-block;
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      color: $primary;
+    }
+    input[type="radio"] {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  padding-top: 2rem;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  justify-content: space-between;
+  button {
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.question-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  p {
+    margin: 0;
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+  }
+}
+
+// progress-bar
+.progress-bar {
+  height: 0.5rem;
+  width: 100%;
+  background: #ccc;
+  position: relative;
+  .progress-bar-fill {
+    display: block;
+    position: relative;
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(
+        329deg,
+        rgba(255, 255, 255, 0.07) 40%,
+        transparent 10%
+      ),
+      linear-gradient(36deg, rgba(255, 255, 255, 0.13) 10%, transparent 15%),
+      linear-gradient(322deg, transparent 70%, rgba(255, 255, 255, 0.05) 51%),
+      linear-gradient(312deg, transparent 100%, rgba(255, 255, 255, 0.19) 0%);
+    background-color: $primary;
+    transition: width 2s ease;
+  }
+}
+
+// notification
+.notification {
+  background: lightblue;
+  border-radius: 0.2rem;
+  color: #000;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 4rem;
+  .icon {
+    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    background: darken(lightblue, 20%);
+  }
+  .msg {
+    flex-grow: 1;
+    padding: 0.5rem 1rem;
+    line-height: 1.2rem;
+  }
+  svg {
+    fill: $white;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    &:hover {
+      fill: #000000;
+    }
+  }
+}
+
+.notification.error {
+  background: red;
+  .icon {
+    color: $white;
+    background: darken(red, 20%);
+  }
+  .msg {
+    color: $white;
+  }
+}
+
+.result {
+  color: $primary;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  html,
+  body {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  #root {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
